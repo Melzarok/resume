@@ -1,0 +1,206 @@
+<div>
+  <header>
+    <h2>{{person.name}}</h2>
+    <div>Age: <b>{{person.age}}</b></div>
+    <br />
+    <div>Gender: <b>{{person.gender}}</b></div>
+    <hr />
+  </header>
+  {{#with person}}
+    <main>
+      <section>
+        <div>
+          <h3>Education:</h3>
+          {{#each education}}
+            <div>Major: "{{major}}"</div>
+            <br />
+            <div>Degree: "{{degree}}"</div>
+            <br />
+            <div>University: '<em>{{university}}</em>'</div>
+            <br />
+            <div>Graduation Year: {{graduationYear}}</div>
+          {{/each}}
+        </div>
+      </section>
+      <section>
+        <div>
+          <b>Work experience</b>
+          <br />
+          {{#each workExperience}}
+            <br />
+            <div>Company: <em>{{company}}</em></div>
+            <br />
+            <div>Speciality: <em>{{title}}</em></div>
+            <br />
+            <div>Experience:
+              {{startDate}}
+              -
+              {{endDate}}
+            </div>
+            <br />
+            <div>Responsibilities :
+              {{#each responsibilities}}
+                <ul>
+                  <li>
+                    {{this}}
+                  </li>
+                </ul>
+              {{/each}}
+            </div>
+            <br />
+            <div><b>Year founded:</b> {{year_founded}}</div>
+            <br />
+            <div><b>Industry:</b> '{{industry}}'</div>
+            <br />
+            <hr />
+            <br />
+            <div>
+              {{#each employees}}
+                <p><b>Employees:</b></p>
+                <ul>
+                  <li>
+                    <b>"{{name}}"</b>
+                    <br />
+                    <br />
+                    <div>Positinon: '<abr>
+                        {{position}}
+                      </abr>'
+                    </div>
+                    <br />
+                    <div>Department:
+                      <em>'{{department}}'</em>
+                    </div>
+                    <br />
+                    <div>
+                      {{#each projects}}
+                        <ul>
+                          <li>
+                            <div>"<b>{{name}}</b>"</div>
+                            <br />
+                            <div>Description: '<em
+                              >{{description}}</em>'
+                            </div>
+                            <br />
+                            <div>Status - ({{status}})</div>
+                            <div>
+                              <p><b>Teams:</b></p>
+                              {{#each teams}}
+                                <ul>
+                                  <li>
+                                    <div>Team name - "<em
+                                      >{{team_name}}</em>"
+                                    </div>
+                                    <div>Leader:
+                                      <br />
+                                      <br />
+                                      <ul>
+                                        <li>
+                                          <div><b
+                                            >"{{team_leader.name}}"</b></div>
+                                          <br />
+                                          <div><b
+                                            >Status:</b>
+                                            '{{team_leader.title}}'</div>
+                                          <br />
+                                          <div><a
+                                              href='mailto:john.smith@example.com'
+                                            >{{team_leader.email}}</a></div>
+                                          <br />
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <br />
+                                    <li>
+                                      {{#each team_members}}
+                                        <div><b
+                                          >"{{name}}"</b></div>
+                                        <br />
+                                        <div><b>Status:</b>
+                                          '{{title}}'</div>
+                                        <br />
+                                        <div><a
+                                            href='mailto:alice.johnson@example.com'
+                                          >{{email}}</a></div>
+                                        <br />
+                                        <div>Skills:
+                                          {{#each skills}}
+                                            '<em>
+                                              {{this}}
+                                            </em>',
+                                          {{/each}}
+                                        </div>
+                                        <br />
+                                        <div>
+                                          {{#each projects}}
+                                            <ul>
+                                              <li>
+                                                <div>"<b
+                                                  >{{name}}</b>"</div>
+                                                <br />
+                                                <div
+                                                >Description:
+                                                  '<em
+                                                  >{{description}}</em>'
+                                                </div>
+                                                <br />
+                                                <div>
+                                                  Technologies:
+                                                  {{#each
+                                                    technologies
+                                                  }}
+                                                    <em
+                                                    >'{{this}}'</em>
+                                                  {{/each}}
+                                                </div>
+                                                <br />
+                                                <div><b
+                                                  >Members</b>:</div>
+                                                <br />
+                                                <div>
+                                                  {{#each
+                                                    team_members
+                                                  }}
+                                                    <ul>
+                                                      <li>
+                                                        <div
+                                                        >"<b
+                                                          >{{name}}</b>"</div>
+                                                        <div
+                                                        ><b
+                                                          >Status:</b>
+                                                          '<em
+                                                          >{{title}}</em>'
+                                                        </div>
+                                                        <br
+                                                        />
+                                                      </li>
+                                                    </ul>
+                                                  {{/each}}
+                                                </div>
+                                              </li>
+                                            </ul>
+                                            <br />
+
+                                          {{/each}}
+                                        </div>
+                                      {{/each}}
+                                    </li>
+                                  </li>
+                                </ul>
+                              {{/each}}
+                            </div>
+                          </li>
+                        </ul>
+                      {{/each}}
+                    </div>
+                  </li>
+                </ul>
+              {{/each}}
+            </div>
+          {{/each}}
+        </div>
+      </section>
+    </main>
+  {{/with}}
+  <hr />
+</div>
