@@ -1,0 +1,183 @@
+<div>
+  <header>
+    <h1>{{name}}</h1>
+  </header>
+  <main>
+    <section>
+      <br />
+      <div><b>Birth date</b> - <em>{{birthdate}}</em></div>
+      <br />
+      <div><b>Death date</b> - <em>{{deathdate}}</em></div>
+      <br />
+      <div><b>Birth place</b>:
+        <address>"{{birthplace}}"</address>
+      </div>
+      <br />
+      <div><b>Nationality</b> - {{nationality}}</div>
+      <br />
+      <div><b>Occupation</b> - "{{occupation}}"</div>
+      <br />
+      <div><b>Known</b>
+        :
+        {{#each known_for}}
+          <ul>
+            <li>
+              {{this}}
+            </li>
+          </ul>
+        {{/each}}
+      </div>
+    </section>
+    <hr />
+    <br />
+    <section>
+      <div><big><b>Education</b></big></div>
+      <br />
+      <br />
+      <div>
+        {{#each education}}
+          <div><b>{{degree}}</b></div>
+          <br />
+          <div><b>Field</b>: '{{field}}'</div>
+          <br />
+          <div><b>Institution</b>
+            -
+            <em>"{{institution}}"</em></div>
+          <br />
+          <div><b>Year</b>: {{year}}</div>
+        {{/each}}
+      </div>
+    </section>
+    <br />
+    <hr />
+    <br />
+    <section>
+      <div>
+        <p><b>Notable publications :</b></p>
+        <br />
+        <ol>
+          {{#each notable_publications}}
+            <li>
+              <div>"{{title}}"</div>
+              <br />
+              <div><b>Year</b>: {{year}}</div>
+              <br />
+              <div>Publisher: '{{publisher}}'</div>
+            </li>
+            <br />
+            <br />
+          {{/each}}
+        </ol>
+      </div>
+    </section>
+    <hr />
+    <br />
+    <section>
+      <div>
+        <p><b>Partners</b>:</p>
+        <br />
+        <ol>
+          {{#each partners}}
+            <li>
+              <div>'{{name}}'</div>
+              <br />
+              <div>Relationship - {{relationship}}</div>
+              <br />
+              <div>{{years}}</div>
+            </li>
+            <br />
+            <br />
+          {{/each}}
+        </ol>
+      </div>
+    </section>
+    <hr />
+    <section>
+      <div>
+        <p><b>Awards:</b></p>
+        <br />
+        {{#each awards}}
+          <div>'{{title}}'</div>
+          <br />
+          <div><b>Year</b>: {{year}}</div>
+          <br />
+          <div>Description - "<em
+            >{{description}}</em>"</div>
+        {{/each}}
+      </div>
+    </section>
+    <br />
+    <hr />
+    <br />
+    <section>
+      <div>
+        <p><b>Influences</b>:</p>
+        <ul>
+          {{#each influences}}
+            <li>'{{this}}'</li>
+            <br />
+          {{/each}}
+        </ul>
+      </div>
+    </section>
+    <br />
+    <section>
+      <div>
+        <p><b>Influenced</b>:</p>
+        <ul>
+          {{#each influenced}}
+            <li>'{{this}}'</li>
+            <br />
+          {{/each}}
+        </ul>
+      </div>
+    </section>
+    <br />
+    <hr />
+    <section>
+      <div>
+        <p><b>Quotes</b></p>
+        <ul>
+          {{#each quotes}}
+            <li><q>{{this}}</q></li>
+            <br />
+          {{/each}}
+        </ul>
+      </div>
+    </section>
+    <br />
+    <hr />
+    <section>
+      <div>
+        <p><b>Major discoveries</b></p>
+        <br />
+        {{#each major_discoveries}}
+          <div>'{{title}}'</div>
+          <br />
+          <div><b>Year</b>: {{year}}</div>
+          <br />
+          <div><b>Description</b>: "<em
+            >{{description}}</em>"</div>
+        {{/each}}
+      </div>
+    </section>
+    <br />
+    <hr />
+    <section>
+      <div>
+        <p><b>Contributions</b></p>
+        <br />
+        {{#with contributions}}
+          <div>'{{title}}'</div>
+          <br />
+          <div><b>Description</b>: "<em
+            >{{description}}</em>"</div>
+          <br />
+          <div><b>Year</b>: {{year}}</div>
+          <br />
+          <div><b>Field</b>: '{{field}}'</div>
+        {{/with}}
+      </div>
+    </section>
+  </main>
+</div>
