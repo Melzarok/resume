@@ -1,0 +1,136 @@
+<div>
+  <header>
+    <h1>Programming languages</h1>
+  </header>
+  <main>
+    <section>
+      {{#with web}}
+        <div>
+          <ul>
+            {{#each languages}}
+              <li>
+                <div><b>{{name}}</b></div>
+                <br />
+                <div><b>Version</b>: {{version}}</div>
+                <br />
+                <div>"<em>{{description}}</em>"</div>
+                <br />
+                {{#if elements}}
+                  <div><b>Elements</b>:</div>
+                  <br />
+                  <br />
+                  <ul>
+                    {{#each elements}}
+                      <li>
+                        <div><b>Name</b>: '<code
+                          >{{name}}</code>'</div>
+                        <br />
+                        <div>"<em
+                          >{{description}}</em>"</div>
+                        <br />
+                        <div><b>Attributes</b>:
+                          <br />
+                          <br />
+                          <ul>
+                            {{#each attributes}}
+                              <li>
+                                <div>'<code
+                                  >{{name}}</code>'</div>
+                                <br />
+                                <div>"<em
+                                  >{{description}}</em>"</div>
+                                <br />
+                                <br />
+                              </li>
+                            {{/each}}
+                          </ul>
+                        </div>
+                      </li>
+                      <br />
+                    {{/each}}
+                  </ul>
+                {{/if}}
+                {{#if properties}}
+                  <div><b>Properties</b>:</div>
+                  <br />
+                  <br />
+                  <ul>
+                    {{#each properties}}
+                      <li>
+                        <div><b>Name</b>: '<code
+                          >{{name}}</code>'</div>
+                        <br />
+                        <div>"<em
+                          >{{description}}</em>"</div>
+                        <br />
+                        <div><b>Values</b>:
+                          <br />
+                          <br />
+                          <ul>
+                            {{#each values}}
+                              <li>
+                                <div>'<code
+                                  >{{value}}</code>'</div>
+                                <br />
+                                <div>"<em
+                                  >{{description}}</em>"</div>
+                                <br />
+                                <br />
+                              </li>
+                            {{/each}}
+                          </ul>
+                        </div>
+                      </li>
+                      <br />
+                    {{/each}}
+                  </ul>
+                {{/if}}
+                {{#if functions}}
+                  <div><b>Functions</b>:</div>
+                  <br />
+                  <br />
+                  <ul>
+                    {{#each functions}}
+                      <li>
+                        <div><b>Name</b>: '<code
+                          >{{name}}</code>'</div>
+                        <br />
+                        <div>"<em
+                          >{{description}}</em>"</div>
+                        <br />
+                        <div><b>Parameters</b>:
+                          <br />
+                          <br />
+                          <ul>
+                            {{#each parameters}}
+                              <li>
+                                <div>'<code
+                                  >{{name}}</code>'</div>
+                                <br />
+                                <div>Type: '{{type}}'</div>
+                                <br />
+                                <div>"<em
+                                  >{{description}}</em>"</div>
+                                <br />
+                                <br />
+                              </li>
+                            {{/each}}
+                          </ul>
+                        </div>
+                      </li>
+                      <br />
+                    {{/each}}
+                  </ul>
+                {{/if}}
+              </li>
+              <br />
+              <br />
+              <hr />
+              <br />
+            {{/each}}
+          </ul>
+        </div>
+      {{/with}}
+    </section>
+  </main>
+</div>
