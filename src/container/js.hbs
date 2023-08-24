@@ -1,0 +1,251 @@
+<div>
+  <header>
+    <h1>
+      <p class='d-inline-flex gap-1'>
+        <a
+          data-bs-toggle='collapse'
+          href='#collapseExample'
+          role='button'
+          aria-expanded='false'
+          aria-controls='collapseExample'
+        >
+          <span
+            class='badge text-bg-warning'
+          >{{name}}</span>
+        </a>
+      </p>
+    </h1>
+    <div class='collapse' id='collapseExample'>
+      <div class='card card-body'>
+        "{{description}}"
+      </div>
+    </div>
+    <hr />
+  </header>
+  <main>
+    <section>
+      <div><b><big>History</big></b>
+        <br />
+        <br />
+        {{#with history}}
+          <div>Year: {{year}}</div>
+          <br />
+          <div>Founder: "{{founder}}"</div>
+        {{/with}}
+      </div>
+      <br />
+      <div>
+        <p>
+          <button
+            class='btn text-bg-dark'
+            type='button'
+            data-bs-toggle='collapse'
+            data-bs-target='#collapseWidthExample'
+            aria-expanded='false'
+            aria-controls='collapseWidthExample'
+          >
+            Types:
+          </button>
+        </p>
+        <div style='min-height: 120px;'>
+          <div
+            class='collapse collapse-horizontal'
+            id='collapseWidthExample'
+          >
+            <div
+              class='card card-body'
+              style='width: 300px;'
+            >
+              <ul>
+                {{#each types}}
+                  <li>
+                    <div>{{this}}</div>
+                  </li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div><b><big>Syntax:</big>:</b>
+        <br />
+        <br />
+        {{#with syntax}}
+          <ul>
+            <li>
+              <div>Variables:
+                <ul>
+                  <li>
+                    {{#each variables}}
+                      <code>'{{this}}'</code>
+                    {{/each}}
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div>Functions:
+                <ul>
+                  <li>
+                    {{#each functions}}
+                      <code>'{{this}}'</code>
+                    {{/each}}
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div>Conditionals:
+                <ul>
+                  <li>
+                    {{#each conditionals}}
+                      <code>'{{this}}'</code>
+                    {{/each}}
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div>Loops:
+                <ul>
+                  <li>
+                    {{#each loops}}
+                      <code>'{{this}}'</code>
+                    {{/each}}
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div>Classes:
+                <ul>
+                  <li>
+                    {{#each classes}}
+                      <code>'{{this}}'</code>
+                    {{/each}}
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        {{/with}}
+      </div>
+      <br />
+      <div>
+        <p>
+          <button
+            class='btn text-bg-dark'
+            type='button'
+            data-bs-toggle='collapse'
+            data-bs-target='#collapseWidthExample'
+            aria-expanded='false'
+            aria-controls='collapseWidthExample'
+          >
+            Features:
+          </button>
+        </p>
+        <div style='min-height: 120px;'>
+          <div
+            class='collapse collapse-horizontal'
+            id='collapseWidthExample'
+          >
+            <div
+              class='card card-body'
+              style='width: 300px;'
+            >
+              <ul>
+                {{#each features}}
+                  <li>
+                    <div>{{this}}</div>
+                  </li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div>
+        <p>
+          <button
+            class='btn text-bg-dark'
+            type='button'
+            data-bs-toggle='collapse'
+            data-bs-target='#collapseWidthExample'
+            aria-expanded='false'
+            aria-controls='collapseWidthExample'
+          >
+            Libraries:
+          </button>
+        </p>
+        <div style='min-height: 120px;'>
+          <div
+            class='collapse collapse-horizontal'
+            id='collapseWidthExample'
+          >
+            <div
+              class='card card-body'
+              style='width: 300px;'
+            >
+              <ul>
+                {{#each libraries}}
+                  <li>
+                    <div>{{this}}</div>
+                  </li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div>
+        <p>
+          <button
+            class='btn text-bg-dark'
+            type='button'
+            data-bs-toggle='collapse'
+            data-bs-target='#collapseWidthExample'
+            aria-expanded='false'
+            aria-controls='collapseWidthExample'
+          >
+            Tools:
+          </button>
+        </p>
+        <div style='min-height: 120px;'>
+          <div
+            class='collapse collapse-horizontal'
+            id='collapseWidthExample'
+          >
+            <div
+              class='card card-body'
+              style='width: 300px;'
+            >
+              <ul>
+                {{#each tools}}
+                  <li>
+                    <div>{{this}}</div>
+                  </li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div><b>Community</b>:
+        <br />
+        <br />
+        <ul>
+          {{#each community}}
+            <li>
+              <div><b>'{{name}}'</b></div>
+              <div>Type: {{type}}</div>
+            </li>
+            <br />
+          {{/each}}
+        </ul>
+      </div>
+    </section>
+  </main>
+</div>
