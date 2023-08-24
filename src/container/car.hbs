@@ -1,0 +1,493 @@
+<div>
+  <header>
+    <h1><span class='badge rounded-pill text-bg-dark'>Car
+        characteristics</span></h1>
+  </header>
+  <br />
+  <main>
+    <setion>
+      <div class='card' style='width: 18rem;'>
+        <img
+          src='https://media.ed.edmunds-media.com/toyota/camry-hybrid/2021/oem/2021_toyota_camry-hybrid_sedan_xse_fq_oem_1_1280x855.jpg'
+          class='card-img-top'
+          alt='https://media.ed.edmunds-media.com/toyota/camry-hybrid/2021/oem/2021_toyota_camry-hybrid_sedan_xse_fq_oem_2_1280x855.jpg'
+        />
+
+        <div class='card-body'>
+          <h5 class='card-title'>{{make}}
+            {{model}}
+            {{year}}</h5>
+          <p class='card-text'>Color:
+            {{color}}
+          </p>
+        </div>
+        <ul class='list-group list-group-flush'>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  <span class="badge text-bg-primary"><big><b>Features:</b></big></span>
+                </button>
+              </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                {{#with features}}
+                  <ul>
+                    <li>
+                      <div><big><b>Interior</b></big></div>
+                      <br />
+                      <ul>
+                        {{#with interior}}
+                          <li>
+                            <div><b>Seats:</b></div>
+                            <br />
+                            <ul>
+                              {{#with seats}}
+                                <li>
+                                  <div>Material:
+                                    {{material}}</div>
+                                  <br />
+                                </li>
+                                <li>
+                                  <div>Color:
+                                    {{color}}
+                                  </div>
+                                </li>
+                                <br />
+                                <li>
+                                  <div>Heated:
+                                    {{#if heated}}
+                                      ✅
+                                    {{else}}
+                                      ❌
+                                    {{/if}}
+                                  </div>
+                                </li>
+                                <br />
+                                <li>
+                                  <div>Ventilated:
+                                    {{#if ventilated}}
+                                      ✅
+                                    {{else}}
+                                      ❌
+                                    {{/if}}
+                                  </div>
+                                </li>
+                              {{/with}}
+                            </ul>
+                          </li>
+                          <br />
+                          <li>
+                            <div><b>Dashboard</b></div>
+                            <br />
+                            <ul>
+                              {{#with dashboard}}
+                                <li>
+                                  <div>Material:
+                                    {{material}}</div>
+                                  <br />
+                                </li>
+                                <li>
+                                  <div>Color:
+                                    {{color}}</div>
+                                </li>
+                                <br />
+                                <li>
+                                  <div>Display:
+                                    <br />
+                                    <br />
+                                    <ul>
+                                      {{#with display}}
+                                        <li>
+                                          <div>Type:
+                                            {{type}}</div>
+                                        </li>
+                                        <br />
+                                        <li>
+                                          <div>Size:
+                                            {{size}}</div>
+                                        </li>
+                                        <br />
+                                        <li>
+                                          <div>Resolution: ({{resolution}})</div>
+                                        </li>
+                                        <br />
+                                        <li>
+                                          <div>Touchscreen:
+                                            {{#if touchscreen}}
+                                              ✅
+                                            {{else}}
+                                              ❌
+                                            {{/if}}
+
+                                          </div>
+                                        </li>
+
+                                      {{/with}}
+                                    </ul>
+                                  </div>
+                                </li>
+                              {{/with}}
+                            </ul>
+                          </li>
+                          <br />
+                          <li>
+                            <div><b>Audio</b></div>
+                            <br />
+                            <ul>
+                              {{#with audio}}
+                                <li>
+                                  <div>'{{system}}'</div>
+                                </li>
+                                <br />
+                                <li>
+                                  <div>Speakers:
+                                    {{speakers}}</div>
+                                </li>
+                                <br />
+                                <li>
+                                  <div>Subwoofer:
+                                    {{#if subwoofer}}
+                                      ✅
+                                    {{else}}
+                                      ❌
+                                    {{/if}}
+                                  </div>
+                                </li>
+                                <br />
+                                <li>
+                                  <div>Bluetooth:
+                                    {{#if bluetooth}}
+                                      ✅
+                                    {{else}}
+                                      ❌
+                                    {{/if}}
+                                  </div>
+                                </li>
+                                <br />
+                                <li>
+                                  <div>USB:
+                                    {{#if USB}}
+                                      ✅
+                                    {{else}}
+                                      ❌
+                                    {{/if}}
+                                  </div>
+                                </li>
+                              {{/with}}
+                            </ul>
+                          </li>
+                        {{/with}}
+                      </ul>
+                    </li>
+                    <br />
+                    <br />
+                    <li>
+                      <div><big><b>Exterior</b></big></div>
+                      <br />
+                      <ul>
+                        {{#with exterior}}
+                          <li>
+                            <div><b>Wheels</b>:
+                              <br />
+                              <br />
+                              <ul>
+                                {{#with wheels}}
+                                  <li>
+                                    <div>Size:
+                                      {{size}}</div>
+                                  </li>
+                                  <br />
+                                  <li><div>Type:
+                                      {{type}}</div></li>
+                                  <br />
+                                  <li>
+                                    <div>Color:
+                                      {{color}}</div>
+                                  </li>
+                                {{/with}}
+                              </ul>
+                            </div>
+                          </li>
+                          <br />
+                          <li>
+                            <div><b>Headlights</b>:
+                              <br />
+                              <br />
+                              <ul>
+                                {{#with headlights}}
+                                  <li>
+                                    <div>'{{type}}'</div>
+                                  </li>
+                                  <br />
+                                  <li>
+                                    <div>Brightness:
+                                      {{brightness}}</div>
+                                  </li>
+                                  <br />
+                                  <li>
+                                    <div>Automatic:
+                                      {{#if automatic}}
+                                        ✅
+                                      {{else}}
+                                        ❌
+                                      {{/if}}
+                                    </div>
+                                  </li>
+                                {{/with}}
+                              </ul>
+                            </div>
+                          </li>
+                          <br />
+                          <li>
+                            <div><b>Sunroof</b>:
+                              <br />
+                              <br />
+                              <ul>
+                                {{#with sunroof}}
+                                  <li>
+                                    <div>'{{type}}'</div>
+                                  </li>
+                                  <br />
+                                  <li>
+                                    <div>Size:
+                                      {{size}}</div>
+                                  </li>
+                                  <br />
+                                  <li>
+                                    <div>Automatic:
+                                      {{#if automatic}}
+                                        ✅
+                                      {{else}}
+                                        ❌
+                                      {{/if}}
+                                    </div>
+                                  </li>
+                                {{/with}}
+                              </ul>
+                            </div>
+                          </li>
+                        {{/with}}
+                      </ul>
+                    </li>
+                    <br />
+                    <li>
+                      <div><big><b>Safety</b></big></div>
+                      <br />
+                      <ul>
+                        {{#with safety}}
+                          <li>
+                            <div><b>Airbags</b>:
+                              <br />
+                              <br />
+                              <ul>
+                                {{#with airbags}}
+                                  <li>
+                                    <div>Front: ({{front}})</div>
+                                  </li>
+                                  <br />
+                                  <li>
+                                    <div>
+                                      Side: ({{side}})
+                                    </div>
+                                  </li>
+                                  <br />
+                                  <li>
+                                    <div>Knee: ({{knee}})</div>
+                                  </li>
+                                  <br />
+                                  <li>
+                                    <div>Rear: ({{rear}})</div>
+                                  </li>
+                                {{/with}}</ul>
+                            </div>
+                          </li>
+                          <br />
+                          <li>
+                            <div><b>Assistance</b>:
+                              <br />
+                              <br />
+                              <ul>
+                                {{#with assistance}}
+                                  <li>
+                                    <div>Blind_spot_monitoring:
+                                      {{#if blind_spot_monitoring}}
+                                        ✅
+                                      {{else}}
+                                        ❌
+                                      {{/if}}</div>
+                                  </li>
+                                  <br />
+                                  <li>
+                                    <div>
+                                      Rear_cross_traffic_alert:
+                                      {{#if rear_cross_traffic_alert}}
+                                        ✅
+                                      {{else}}
+                                        ❌
+                                      {{/if}}
+                                    </div>
+                                  </li>
+                                  <br />
+                                  <li>
+                                    <div>Lane_departure_warning:
+                                      {{#if lane_departure_warning}}
+                                        ✅
+                                      {{else}}
+                                        ❌
+                                      {{/if}}</div>
+                                  </li>
+                                  <br />
+                                  <li>
+                                    <div>Adaptive_cruise_control:
+                                      {{#if adaptive_cruise_control}}
+                                        ✅
+                                      {{else}}
+                                        ❌
+                                      {{/if}}</div>
+                                  </li>
+                                  <br />
+                                  <li>
+                                    <div>Collision_warning:
+                                      {{#if collision_warning}}
+                                        ✅
+                                      {{else}}
+                                        ❌
+                                      {{/if}}
+                                    </div>
+                                  </li>
+                                {{/with}}</ul>
+                            </div>
+                          </li>
+                        {{/with}}
+                      </ul>
+                    </li>
+                    <br />
+                  </ul>
+                {{/with}}
+                </div>
+            </div>
+          </div>
+          <div
+            class='accordion accordion-flush'
+            id='accordionFlushExample'
+          >
+            <div class='accordion-item'>
+              <h2 class='accordion-header'>
+                <button
+                  class='accordion-button collapsed'
+                  type='button'
+                  data-bs-toggle='collapse'
+                  data-bs-target='#flush-collapseTwo'
+                  aria-expanded='false'
+                  aria-controls='flush-collapseTwo'
+                >
+                  <span class="badge text-bg-success"><b><big>Engine:</big></b></span>
+                </button>
+              </h2>
+              <div
+                id='flush-collapseTwo'
+                class='accordion-collapse collapse'
+                data-bs-parent='#accordionFlushExample'
+              >
+                <div class='accordion-body'> 
+                  <ul>
+                    {{#with engine}}
+                      <li>
+                        <div><span class="badge rounded-pill text-bg-success">'<big>{{type}}</big>'</span></div>
+                      </li>
+                      <br>
+                      <li>
+                        <div>Displacement: {{displacement}}</div>
+                      </li>
+                      <br>
+                      <li>
+                        <div>Horsepower: {{horsepower}}</div>
+                      </li>
+                      <br>
+                      <li>
+                          <div>Torque: {{torque}}</div>
+                      </li>
+                      <br>
+                      <li>
+                        <div><span class="badge rounded-pill text-bg-warning"><big>Transmission:</big></span> 
+                        <br>
+                        <br>
+                        <ul>
+                            {{#with transmission}}
+                            <li>
+                              <div>'{{type}}'</div>
+                            </li>
+                            <br>
+                            <li>
+                              <div>Gears: ({{gears}})</div>
+                            </li>
+                            {{/with}}
+                          </ul>
+                        </div>
+                      </li>
+                    {{/with}}
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class='accordion-item'>
+              <h2 class='accordion-header'>
+                <button
+                  class='accordion-button collapsed'
+                  type='button'
+                  data-bs-toggle='collapse'
+                  data-bs-target='#flush-collapseThree'
+                  aria-expanded='false'
+                  aria-controls='flush-collapseThree'
+                >
+                  <span class="badge text-bg-success"><b><big>Fuel economy</big></b></span>
+                </button>
+              </h2>
+              <div
+                id='flush-collapseThree'
+                class='accordion-collapse collapse'
+                data-bs-parent='#accordionFlushExample'
+              >
+                <div class='accordion-body'>
+                {{#with fuel_economy}}  
+                <div><b>City: </b>{{city}}л</div>
+                <br>
+                <div><b>Highway: </b>{{highway}}л</div>
+                <br>
+                <div><b>Combined: </b>{{combined}}л</div>
+                {{/with}}
+              </div>
+            </div>
+          </div>
+        </ul>
+        <div class='card-body'>
+            <div>
+              <br>
+              <ul>
+                {{#with price}}
+                  <li><div>Base: {{base}}</div></li>
+                  <br>
+                  <li><div>Destination: {{destination}}</div></li>
+                  <br>
+                  {{#with options}}
+                  <li><div>Navigation: {{navigation}}</div></li>
+                  <br>
+                  <li><div>Moonroof: {{moonroof}}</div></li>
+                  <br>
+                  <li><div>Premium paint: {{premium_paint}}</div></li>
+                  {{/with}}
+                {{/with}}
+              </ul>
+              <br>
+              <a href='#'><button
+              type='button'
+              class='btn btn-outline-success'
+            ><b>{{price.total}}</b></button></a>
+            </div>
+          <br />
+        </div>
+      </div>
+    </setion>
+  </main>
+</div>
