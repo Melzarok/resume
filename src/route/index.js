@@ -668,7 +668,6 @@ router.get('/web', function (req, res) {
   })
 })
 
-
 router.get('/car', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -763,8 +762,9 @@ router.get('/car', function (req, res) {
       },
       total: 28990,
     },
-    
-    
+  })
+})
+
 router.get('/js', function (req, res) {
   res.render('js', {
     layout: 'basic',
@@ -838,7 +838,7 @@ router.get('/js', function (req, res) {
       },
     ],
   })
-  //                  ↑↑ сюди вводимо JSON дані
 })
+
 // Підключаємо роутер до бек-енду
 module.exports = router
