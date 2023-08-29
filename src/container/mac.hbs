@@ -1,0 +1,415 @@
+<div>
+  <header><h1>{{name}}
+      {{#with features}}
+        {{storage.size}}
+      {{/with}}
+    </h1></header>
+  <main>
+    <section>
+      <div
+        id='carouselExampleIndicators'
+        class='carousel slide'
+      >
+        <div class='carousel-indicators'>
+          <button
+            type='button'
+            data-bs-target='#carouselExampleIndicators'
+            data-bs-slide-to='0'
+            class='active'
+            aria-current='true'
+            aria-label='Slide 1'
+          ></button>
+          <button
+            type='button'
+            data-bs-target='#carouselExampleIndicators'
+            data-bs-slide-to='1'
+            aria-label='Slide 2'
+          ></button>
+          <button
+            type='button'
+            data-bs-target='#carouselExampleIndicators'
+            data-bs-slide-to='2'
+            aria-label='Slide 3'
+          ></button>
+        </div>
+        <div class='carousel-inner'>
+          <div class='carousel-item active'>
+            <img
+              src='https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://cdn.comfy.ua/media/catalog/product/m/b/mbp14-spacegray-gallery1-202301_1__6.jpg/w_600'
+              class='d-block w-100'
+              alt='...'
+            />
+          </div>
+          <div class='carousel-item'>
+            <img
+              src='https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://cdn.comfy.ua/media/catalog/product/m/b/mbp14-spacegray-gallery6-202301_6.jpg/w_600'
+              class='d-block w-100'
+              alt='...'
+            />
+          </div>
+          <div class='carousel-item'>
+            <img
+              src='https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://cdn.comfy.ua/media/catalog/product/m/b/mbp14-spacegray-gallery3-202301_6.jpg/w_600'
+              class='d-block w-100'
+              alt='...'
+            />
+          </div>
+        </div>
+        <button
+          class='carousel-control-prev'
+          type='button'
+          data-bs-target='#carouselExampleIndicators'
+          data-bs-slide='prev'
+        >
+          <span
+            class='carousel-control-prev-icon'
+            aria-hidden='true'
+          ></span>
+          <span class='visually-hidden'>Previous</span>
+        </button>
+        <button
+          class='carousel-control-next'
+          type='button'
+          data-bs-target='#carouselExampleIndicators'
+          data-bs-slide='next'
+        >
+          <span
+            class='carousel-control-next-icon'
+            aria-hidden='true'
+          ></span>
+          <span class='visually-hidden'>Next</span>
+        </button>
+      </div>
+    </section>
+    <br />
+    <div><div
+        class='d-grid gap-2 d-md-flex justify-content-md-end'
+      >
+        <span><b>{{price}}$</b></span>
+      </div></div>
+    <section>
+      <div><div
+          class='d-grid gap-2 d-md-flex justify-content-md-end'
+        >
+          <a href='#'><button
+              type='button'
+              class='btn btn-success'
+            >Купити</button></a>
+
+        </div></div>
+    </section>
+    <br />
+    <br />
+    <div><b><big>{{category}}</big></b></div>
+    <br />
+    <br />
+    <br />
+    <section><div><b><h2>Екран</h2></b></div>
+      <br />
+      {{#with features}}
+        {{#with display}}
+          <section><div>
+              Діагональ
+              екрану.................................................................................................................
+              {{size}}
+            </div></section>
+          <br />
+          <section><div>
+              Роздільна здатність екрану
+              .........................................................................................
+              {{resolution}}
+            </div>
+          </section>
+          <br />
+          <section><div>
+              Частота оновлення
+              екрану....................................................................................................
+              {{refresh_rate}}
+            </div>
+          </section>
+          <br />
+          <section><div>
+              Тип матриці
+              ................................................................................................................................
+              {{technology}}
+            </div>
+          </section>
+          <br />
+          <section><div>
+              Яркість
+              ........................................................................................................................................
+              {{brightness}}
+            </div>
+          </section>
+          <br />
+          <section><div>
+              Колірний простір
+              .............................................................................................................................
+              {{color_space}}
+            </div>
+          </section>
+        {{/with}}
+      {{/with}}
+    </section>
+    <br />
+    <section>
+      <div><h2>Процесор</h2></div>
+      <br />
+      {{#with features}}
+        {{#with processor}}
+          <section>
+            <div>
+              Виробник процесора
+              ..............................................................................................................
+              {{brand}}
+            </div>
+          </section>
+          <br />
+          <section>
+            <div>Модель процесора
+              ...........................................................................................
+              {{model}}
+              ({{speed}})</div>
+          </section>
+          <br />
+          <section>
+            <div>Кількість ядер
+              ..........................................................................................................................
+              {{cores}}
+              ядер</div>
+          </section>
+          <br />
+          <section>
+            <div>Cache
+              ...........................................................................................................................................
+              {{cache}}</div>
+          </section>
+        {{/with}}
+      {{/with}}
+    </section>
+    <br />
+    <section>
+      <div><h2>ОЗП</h2></div>
+      <br />
+      {{#with features}}
+        {{#with memory}}
+          <section>
+            <div>
+              Об'єм ОЗП
+              ....................................................................................................................................
+              {{size}}
+            </div>
+          </section>
+          <br />
+          <section>
+            <div>
+              Тип
+              ....................................................................................................................................................
+              {{type}}
+            </div>
+          </section>
+          <br />
+          <section>
+            <div>
+              Швидкість
+              .............................................................................................................................
+              {{speed}}
+            </div>
+          </section>
+        {{/with}}
+      {{/with}}
+    </section>
+    <br />
+    <section>
+      <div><h2>Жорсткий диск</h2></div>
+      <br />
+      {{#with features}}
+        {{#with storage}}
+          <section>
+            <div>
+              Тип
+              ........................................................................................................................................................
+              {{type}}
+            </div>
+          </section>
+          <br />
+          <section>
+            <div>
+              Об'єм
+              ..................................................................................................................................................
+              {{size}}
+            </div>
+          </section>
+        {{/with}}
+      {{/with}}
+    </section>
+    <section>
+      <div><h2>Відеокартка</h2></div>
+      <br />
+      {{#with features}}
+        {{#with graphics}}
+          <section>
+            <div>
+              Виробник
+              ......................................................................................................................................
+              {{brand}}
+            </div>
+          </section>
+          <br />
+          <section>
+            <div>
+              Модель
+              ...............................................................................................................
+              {{model}}
+            </div>
+          </section>
+          <br />
+          <section>
+            <div>
+              Кількість відеопам'яті
+              ..............................................................................................
+              {{memory}}
+            </div>
+          </section>
+        {{/with}}
+      {{/with}}
+    </section>
+    <br />
+    <section>
+      <div><h2>OC</h2></div>
+      <br />
+      {{#with features}}
+        <section>
+          <div>
+            ОС
+            ...................................................................................................................................................
+            {{operating_system}}
+          </div>
+        </section>
+      {{/with}}
+    </section>
+    <br />
+    <section>
+      <div><h2>Інтерфейси</h2></div>
+      <br />
+      {{#with features}}
+        {{#each ports}}
+          <section>
+            <div>
+              {{type}}
+              .................................................................................................................................
+              {{count}}
+              шт
+            </div>
+          </section>
+          <br />
+          <br />
+          <section>
+            <div>
+              <ul>
+                {{#each features}}
+                  <li>
+                    {{this}}
+                  </li>
+                  <br />
+                {{/each}}
+              </ul>
+            </div>
+          </section>
+        {{/each}}
+      {{/with}}
+    </section>
+    <br />
+    <section>
+      <div><h2>Батарея</h2></div>
+      <br />
+      {{#with features}}
+        {{#with battery}}
+          <section>
+            <div>
+              Тип
+              ...............................................................................................................................
+              {{type}}
+            </div>
+          </section>
+          <br />
+          <section>
+            <div>
+              Місткість
+              .....................................................................................................................................
+              {{capacity}}
+            </div>
+          </section>
+          <br />
+          <section>
+            <div>
+              Час автономної роботи
+              .......................................................................................
+              {{life}}
+            </div>
+          </section>
+        {{/with}}
+      {{/with}}
+    </section>
+    <br />
+    <section>
+      <div><h2>Корпус</h2></div>
+      <br />
+      {{#with features}}
+        <section>
+          <div>
+            Вага
+            ........................................................................................................................................
+            {{weight}}
+          </div>
+        </section>
+        <br />
+        {{#with dimensions}}
+          <section>
+            <div>
+              Висота
+              ......................................................................................................................................
+              {{height}}
+            </div>
+          </section>
+          <br />
+          <section>
+            <div>
+              Ширина
+              ............................................................................................................................
+              {{width}}
+            </div>
+          </section>
+          <br />
+          <section>
+            <div>
+              Глибина
+              ..............................................................................................................................
+              {{depth}}
+            </div>
+          </section>
+        {{/with}}
+      {{/with}}
+    </section>
+    <br />
+    <section>
+      {{#with features}}
+        {{#each accessories}}
+          <div class='card' style='width: 18rem;'>
+            <img
+              src='https://cdn.27.ua/799/b9/e8/4307432_5.jpeg'
+              class='card-img-top'
+              alt='https://apple-mania.com.ua/media/catalog/product/cache/e026f651b05122a6916299262b60c47d/1/a/1apple-magic-keyboard-mla22-images-600x600.jpg'
+            />
+            <div class='card-body'>
+              <h5 class='card-title'>{{name}}</h5>
+              <p class='card-text'>{{price}}$</p>
+              <a href='#' class='btn btn-success'>Купити</a>
+            </div>
+          </div>
+          <br />
+        {{/each}}
+      {{/with}}
+    </section>
+  </main>
+</div>
