@@ -912,14 +912,17 @@ router.get('/mac', function (req, res) {
         {
           name: 'Apple Magic Keyboard',
           price: 99.99,
+          img: 'https://cdn.27.ua/799/b9/e8/4307432_5.jpeg',
         },
         {
           name: 'Apple Magic Mouse 2',
           price: 79.99,
+          img: 'https://applecity.com.ua/image/cache/catalog/apple-klavy/MLA02-1-1000x1000.jpeg',
         },
         {
           name: 'USB-C to USB Adapter',
           price: 19.99,
+          img: 'https://snpi.dell.com/snp/images/products/large/en-us~AB038316/AB038316.jpg',
         },
       ],
     },
