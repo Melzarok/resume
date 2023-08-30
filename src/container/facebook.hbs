@@ -1,0 +1,236 @@
+<div>
+  <header><h1><span
+        class='badge text-bg-primary'
+      >{{name}}</span></h1></header>
+  <main>
+
+    <h2><span
+        class='badge text-bg-secondary'
+      >Users:</span></h2>
+    <br />
+    <section>
+      <ul>
+        {{#each users}}
+          <li>
+            <div><span class='badge text-bg-secondary'><big
+                >'{{name}}'</big></span></div>
+            <br />
+            <div>Id:
+              <span
+                class='badge text-bg-info'
+              >{{id}}</span></div>
+            <br />
+            <div>Gender: {{gender}}</div>
+            <br />
+            <div>Age: {{age}} years</div>
+            <br />
+            <div>Friends:
+              <ul>
+                {{#each friends}}
+                  <li>
+                    <ul class='list-group'>
+                      <li class='list-group-item'>
+                        <br />
+                        <div><span
+                            class='badge text-bg-secondary'
+                          >'<big
+                            >{{name}}</big>'</span></div>
+                        <br />
+                        <div>Id:
+                          <span
+                            class='badge text-bg-info'
+                          >{{id}}</span></div>
+                        <br />
+                        <div>Gender: {{gender}}</div>
+                        <br />
+                        <div>Age: {{age}}</div>
+                        <br />
+                        <div>Mutual friends:
+                          <br />
+                          <br />
+                          <ul>
+                            {{#each mutual_friends}}
+                              <li>
+                                <div
+                                  class='alert alert-dark'
+                                  role='alert'
+                                >
+                                  <br />
+                                  <div><span
+                                      class='badge text-bg-secondary'
+                                    >'<big
+                                      >{{name}}</big>'</span></div>
+                                  <br />
+                                  <div>Id:
+                                    <span
+                                      class='badge text-bg-info'
+                                    >{{id}}</span></div>
+                                  <br />
+                                  <div>Gender:
+                                    {{gender}}</div>
+                                  <br />
+                                  <div>Age: {{age}}</div>
+                                  <br />
+                                  {{#if mutual_friends}}
+                                    <div>Mutual friends:
+                                      <br />
+                                      <br />
+                                      <ul>
+                                        {{#each
+                                          mutual_friends
+                                        }}
+                                          <li>
+                                            <div><span
+                                                class='badge text-bg-secondary'
+                                              >'<big
+                                                >{{name}}</big>'</span></div>
+                                            <br />
+                                            <div>Id:
+                                              <span
+                                                class='badge text-bg-info'
+                                              >{{id}}</span></div>
+                                            <br />
+                                            <div>Gender:
+                                              {{gender}}</div>
+                                            <br />
+                                            <div>Age:
+                                              {{age}}</div>
+                                            <br />
+                                          </li>
+                                        {{/each}}
+
+                                      </ul>
+                                    </div>
+                                  {{/if}}
+                                </div>
+                              </li>
+                            {{/each}}
+                            {{#if groups}}
+                              <ul>
+                                <li>
+                                  <div>Groups:
+                                    <br />
+                                    <br />
+                                    <ul>
+                                      {{#each groups}}
+                                        <li>
+                                          <button
+                                            type='button'
+                                            class='btn btn-outline-secondary'
+                                          ><div><b
+                                              >{{name}}</b></div>
+                                            <div>
+                                              <small>Id:
+                                                <span
+                                                  class='badge text-bg-info'
+                                                >{{id}}</span>
+                                              </small>
+                                            </div>
+                                            <br />
+                                            <div><em
+                                              >{{description}}</em></div>
+                                            <br />
+                                            <div><b
+                                              >Members:</b>
+                                              <br />
+                                              <br />
+                                              {{#each
+                                                members
+                                              }}
+                                                <small><div
+                                                  ><span
+                                                      class='badge text-bg-secondary'
+                                                    >'<big
+                                                      >{{name}}</big>'</span></div>
+                                                  <div>Id:
+                                                    <span
+                                                      class='badge text-bg-info'
+                                                    >{{id}}</span></div>
+                                                  <div
+                                                  >Gender:
+                                                    {{gender}}</div>
+                                                  <div>Age:
+                                                    {{age}}</div>
+                                                  <br />
+                                                </small>
+                                              {{/each}}
+                                            </div>
+                                          </button>
+                                          <br />
+                                          <br />
+                                        </li>
+                                      {{/each}}
+                                    </ul>
+                                  </div>
+                                </li>
+                              </ul>
+
+                            {{/if}}
+                          </ul>
+                        </div>
+                        <br />
+                      </li>
+                      <br />
+                    </ul>
+                  </li>
+                {{/each}}
+              </ul>
+            </div>
+            <br />
+            {{#if groups}}
+              <div>Groups:
+                <br />
+                <br />
+                <ul>
+                  {{#each groups}}
+                    <li>
+                      <button
+                        type='button'
+                        class='btn btn-outline-secondary'
+                      ><div><b>{{name}}</b></div>
+                        <div>
+                          <small>Id:
+                            <span
+                              class='badge text-bg-info'
+                            >{{id}}</span>
+                          </small>
+                        </div>
+                        <br />
+                        <div><em>{{description}}</em></div>
+                        <br />
+                        <div><b>Members:</b>
+                          <br />
+                          <br />
+                          {{#each members}}
+                            <small><div><span
+                                  class='badge text-bg-secondary'
+                                >'<big
+                                  >{{name}}</big>'</span></div>
+                              <div>Id:
+                                <span
+                                  class='badge text-bg-info'
+                                >{{id}}</span></div>
+                              <div>Gender:
+                                {{gender}}</div>
+                              <div>Age: {{age}}</div>
+                              <br />
+                            </small>
+                          {{/each}}
+                        </div>
+                      </button>
+                      <br />
+                      <br />
+                    </li>
+                  {{/each}}
+                </ul>
+              </div>
+            {{/if}}
+          </li>
+          <br />
+          <br />
+          <br />
+        {{/each}}
+      </ul>
+    </section>
+  </main>
+</div>
