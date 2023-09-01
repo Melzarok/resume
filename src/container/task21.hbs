@@ -9,17 +9,13 @@
               <div>{{text}}</div>
               <br />
               {{#with button_text}}
-                <a href='#'>
-                  <button
-                    class='btn btn-primary'
-                  >{{solid}}</button>
+                <a href='#' class='btn btn-primary'>
+                  {{solid}}
                 </a>
                 <br />
                 <br />
-                <a href='#'>
-                  <button
-                    class='btn btn-outline-primary'
-                  >{{outline}}</button>
+                <a href='#' class='btn btn-outline-primary'>
+                  {{outline}}
                 </a>
               {{/with}}
             </div>
@@ -89,10 +85,8 @@
               <div>{{text}}</div>
               <br />
               {{#with button}}
-                <a href='#'>
-                  <button
-                    class='btn btn-outline-warning'
-                  >{{text}}</button>
+                <a href='#' class='btn btn-outline-warning'>
+                  {{text}}
                 </a>
               {{/with}}
             </div>
@@ -101,10 +95,8 @@
         <br />
         <h6>{{header_text}}</h6>
         <br />
-        <a href='#'>
-          <button
-            class='btn btn-info text-light'
-          >{{button.text}}</button>
+        <a href='#' class='btn btn-info text-light'>
+          {{button.text}}
         </a>
       {{/with}}
     </div>
@@ -122,6 +114,20 @@
           formaction='{{button.url}}'
           type='submit'
         >{{button.text}}</button>
+        <br />
+        <br />
+        <div class='card'>
+          <div class='card-body'>
+            <ul>
+              {{#each list_name}}
+                <li>
+                  <a href='{{url}}'>{{text}}</a>
+                </li>
+                <br />
+              {{/each}}
+            </ul>
+          </div>
+        </div>
       {{/with}}
     </div>
   </div>
