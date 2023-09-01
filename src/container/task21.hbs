@@ -1,0 +1,128 @@
+<header>
+  <div class='card'>
+    <div class='card-body'>
+      {{#with heading}}
+        {{#with main}}
+          <div class='card'>
+            <div class='card-body'>
+              <h1>{{title}}</h1>
+              <div>{{text}}</div>
+              <br />
+              {{#with button_text}}
+                <a href='#'>
+                  <button
+                    class='btn btn-primary'
+                  >{{solid}}</button>
+                </a>
+                <br />
+                <br />
+                <a href='#'>
+                  <button
+                    class='btn btn-outline-primary'
+                  >{{outline}}</button>
+                </a>
+              {{/with}}
+            </div>
+          </div>
+          <br />
+        {{/with}}
+        {{#with second}}
+          <div class='card'>
+            <div class='card-body'>
+              <h2>{{title}}</h2>
+              <div>{{text}}</div>
+              <br />
+              {{#with button_text}}
+                <a href='#'>
+                  <button
+                    class='btn btn-secondary'
+                  >{{solid}}</button>
+                </a>
+                <br />
+                <br />
+                <a href='#'>
+                  <button
+                    class='btn btn-outline-secondary'
+                  >{{outline}}</button>
+                </a>
+              {{/with}}
+            </div>
+          </div>
+        {{/with}}
+        <br />
+        {{#with subblock}}
+          <div class='card'>
+            <div class='card-body'>
+              <h3>{{title}}</h3>
+              <div>{{text}}</div>
+              <br />
+              {{#with button_text}}
+                <a href='#'>
+                  <button
+                    class='btn btn-dark'
+                  >{{solid}}</button>
+                </a>
+                <br />
+                <br />
+                <a href='#'>
+                  <button
+                    class='btn btn-outline-dark'
+                  >{{outline}}</button>
+                </a>
+              {{/with}}
+            </div>
+          </div>
+        {{/with}}
+      {{/with}}
+    </div>
+  </div>
+</header>
+<main>
+  <div class='card'>
+    <div class='card-body'>
+      {{#with nested_display}}
+        <div class='display-1'><b>{{title}}</b></div>
+        {{#with children_display}}
+          <div class='card'>
+            <div class='card-body'>
+              <div class='display-4'><b>{{title}}</b></div>
+              <div>{{text}}</div>
+              <br />
+              {{#with button}}
+                <a href='#'>
+                  <button
+                    class='btn btn-outline-warning'
+                  >{{text}}</button>
+                </a>
+              {{/with}}
+            </div>
+          </div>
+        {{/with}}
+        <br />
+        <h6>{{header_text}}</h6>
+        <br />
+        <a href='#'>
+          <button
+            class='btn btn-info text-light'
+          >{{button.text}}</button>
+        </a>
+      {{/with}}
+    </div>
+  </div>
+  <br />
+  <div class='card'>
+    <div class='card-body'>
+      {{#with paragraph}}
+        <div class='text-uppercase'>{{title}}</div>
+        <br />
+        <div class='text-lowercase'>{{text}}</div>
+        <br />
+        <button
+          class='btn btn-link'
+          formaction='{{button.url}}'
+          type='submit'
+        >{{button.text}}</button>
+      {{/with}}
+    </div>
+  </div>
+</main>
