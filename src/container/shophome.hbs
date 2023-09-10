@@ -86,17 +86,45 @@
   {{/with}}
   <hr class='my-5' />
   {{#with subscribe}}
-    <div class='card text-bg-dark mb-5 p-3'>
+    <div class='card text-bg-dark mb-5 p-3 pb-2'>
       <div>
         <h2 class='mb-3'>{{header}}</h2>
         <p>{{description}}</p>
         {{#each buttons}}
           <a
             href='{{link}}'
-            class='btn btn-primary'
+            class='btn btn-primary mb-3'
+          >{{text}}</a>
+          <br />
+        {{/each}}
+      </div>
+    </div>
+  {{/with}}
+  <hr class='my-5' />
+  {{#with service}}
+    <div class='card text-bg-success mb-5 p-3 pb-2'>
+      <div class='text-center'>
+        <h2 class='mb-3'>{{title}}</h2>
+        <p>{{description}}</p>
+        {{#each buttons}}
+          <a
+            href='{{link}}'
+            class='btn btn-primary mb-3'
           >{{text}}</a>
         {{/each}}
       </div>
     </div>
   {{/with}}
+  <hr class='my-5' />
 </main>
+<footer class='ms-2 mb-3'>
+  <div class='nav'>
+    {{#each footer}}
+      <div class='nav-item'>
+        {{#each this}}
+          <a class='nav-link' href='{{link}}'>{{text}}</a>
+        {{/each}}
+      </div>
+    {{/each}}
+  </div>
+</footer>
