@@ -1,0 +1,57 @@
+<div>
+  {{#each goodsBlock}}
+    <div class='row'>
+      <div class='col-12'>
+        <div class='card mb-4 p-2'>
+          <div class='row gx-2'>
+            <div class='col-2'><img
+                src='{{image}}'
+                class='card-img-top'
+                alt='...'
+              />
+            </div>
+            <div class='col-4'>
+              <div class='card-title mt-5 ms-2 mb-3'>
+                <h4 class='card-text'>{{name}}</h4>
+              </div>
+              <div class='ms-2'>
+                <p
+                  class='text-capitalize'
+                >{{description}}</p>
+              </div>
+            </div>
+            {{#with price}}
+              <div class='col-2 text-center pt-4'>
+                <div class='card-body mt-4'>
+                  <p class='mb-1'>{{title}}:</p>
+                  <p><b><big>{{value}}</big></b></p>
+                </div>
+              </div>
+            {{/with}}
+            <div class='col-2 text-center pt-3'>
+              <div class='card-body mt-5'>
+                <p>{{amount}}</p>
+              </div>
+            </div>
+            <div class='col-2 pt-4'>
+              {{#each buttons}}
+                <div class='card-body py-3'>
+                  {{#if isPrimary}}
+                    <button
+                      class='btn btn-primary'
+                    >{{text}}</button>
+                  {{/if}}
+                  {{#if isDanger}}
+                    <button
+                      class='btn btn-outline-danger'
+                    >{{text}}</button>
+                  {{/if}}
+                </div>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
