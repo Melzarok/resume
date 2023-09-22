@@ -1,0 +1,13 @@
+<header class='m-4 ms-3'>
+  {{#with navigation}}
+    <div class='card'>
+      <div class='nav p-2'>
+        {{#each links}}
+          <div>
+            <a href='{{href}}' class='nav-link'>{{text}}</a>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  {{/with}}
+</header>

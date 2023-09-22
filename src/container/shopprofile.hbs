@@ -1,16 +1,4 @@
-<header class='m-4 mb-5'>
-  {{#with navigation}}
-    <div class='card'>
-      <div class='nav p-2'>
-        {{#each links}}
-          <div>
-            <a href='{{href}}' class='nav-link'>{{text}}</a>
-          </div>
-        {{/each}}
-      </div>
-    </div>
-  {{/with}}
-</header>
+{{> navigation}}
 <main class='m-4'>
   <h1>{{header}}</h1>
   {{#with purchase}}
