@@ -122,4 +122,19 @@
     {{/with}}
   </div>
   {{> reviewItem}}
+  {{#with service}}
+    <div class='card text-bg-success mb-5 p-3 pb-2'>
+      <div class='text-center'>
+        <h2 class='mb-3'>{{title}}</h2>
+        <p>{{description}}</p>
+        {{#each buttons}}
+          <a
+            href='{{link}}'
+            class='btn btn-primary mb-3'
+          >{{text}}</a>
+        {{/each}}
+      </div>
+    </div>
+  {{/with}}
 </main>
+{{> footerShop}}
