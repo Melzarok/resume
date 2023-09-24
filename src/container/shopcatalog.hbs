@@ -1,0 +1,136 @@
+{{> navigation}}
+<main class='ms-2 p-3 pt-5'>
+  <nav aria-label='breadcrumb'>
+    <ol class='breadcrumb'>
+      {{#each breadcrumb}}
+        {{#if url includeZero=null}}
+          <li class='breadcrumb-item'>
+            <a href='{{url}}'>{{name}}</a>
+          </li>
+        {{else}}
+          <li class='breadcrumb-item active'>{{name}}</li>
+        {{/if}}
+      {{/each}}
+    </ol>
+  </nav>
+  <h1 class='mt-5 mb-4'>{{header}}</h1>
+  <div class='row'>
+    {{#each sortBlock}}
+      <div class='col-3'>
+        <div>
+          <select
+            class='form-select'
+            aria-label='Default select example'
+          >
+            <option>{{placeholder}}</option>
+            {{#each options}}
+              <option value='{{value}}'>{{text}}</option>
+            {{/each}}
+          </select>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+  <div class='row mt-5 gx-2 '>
+    <div class='col-4'>
+      <div class='card p-2 px-3'>
+        {{#with filterBlock}}
+          {{#with sellers}}
+            <div class='mb-2'> {{title}}</div>
+            {{#each list}}
+              <div class='form-check mt-2 mb-0'>
+                <label
+                  class='form-check-label'
+                >{{value}}</label>
+                <input
+                  name='food'
+                  type='checkbox'
+                  class='form-check-input'
+                />
+              </div>
+            {{/each}}
+          {{/with}}
+          <div><hr /></div>
+          {{#with brands}}
+            <div class='mb-2'> {{title}}</div>
+            <nav>
+              <div>
+                <form class='d-flex' role='search'>
+                  <input
+                    class='form-control me-2'
+                    type='search'
+                    placeholder='{{input.placeholder}}'
+                  />
+                </form>
+              </div>
+            </nav>
+            {{#each options}}
+              <div class='form-check mt-2 mb-0'>
+                <label
+                  class='form-check-label'
+                >{{value}}</label>
+                <input
+                  name='food'
+                  type='checkbox'
+                  class='form-check-input'
+                />
+              </div>
+            {{/each}}
+          {{/with}}
+          <div class='mt-2'><hr /></div>
+          {{#with price}}
+            <div class='mb-2'> {{title}}</div>
+            {{#with range}}
+              <div>
+                <input
+                  class='form-control'
+                  placeholder='{{from}}'
+                />
+              </div>
+              <div>
+                <input
+                  class='form-control my-3'
+                  placeholder='{{to}}'
+                />
+              </div>
+            {{/with}}
+            {{#with button}}
+              <div><a
+                  class='btn btn-outline-secondary px-3'
+                  href='{{link}}'
+                >{{text}}</a></div>
+            {{/with}}
+          {{/with}}
+          <div class='mt-2'><hr /></div>
+          {{#each filterList}}
+            <div class='mb-2'>{{title}}</div>
+            {{#each options}}
+              <div class='form-check mt-2 mb-1'>
+                <label
+                  class='form-check-label'
+                >{{value}}</label>
+                <input
+                  name='food'
+                  type='checkbox'
+                  class='form-check-input'
+                />
+              </div>
+            {{/each}}
+            <div><hr /></div>
+          {{/each}}
+        {{/with}}
+      </div>
+    </div>
+    <div class='col-8'>
+      <div class='row gx-2 gy-3'>
+        {{#each goodsList}}
+          <div class='col-6'>
+            {{> catalogItem}}
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+  <div class="mt-5">{{> service}}</div>
+</main>
+{{> footerShop}}
