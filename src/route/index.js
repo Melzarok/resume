@@ -38,7 +38,7 @@ router.get('/', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('index', {
-    salary: '600$ в місяць',
+    layout: 'default2',
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
