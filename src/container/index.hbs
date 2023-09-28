@@ -1,3 +1,61 @@
-<div class='p-5'>
-  <h1>Hello world!</h1>
-</div>
+<main class='mt-5 ms-2'>
+  <h2>Список Сторінок</h2>
+  <p>Тестовий текст</p>
+  <div class='mt-5'>
+    <div class='row gx-4'>
+      <div class='col-3'>
+        {{#each list}}
+          {{#if isPrimary}}
+            {{#if isOutline}}{{else}}
+              <div class='mb-2'>
+                <a
+                  href='{{link}}'
+                  class='btn btn-primary'
+                >{{text}}</a></div>
+            {{/if}}
+          {{/if}}
+        {{/each}}
+      </div>
+      <div class='col-3'>
+        {{#each list}}
+          {{#if isPrimary}}
+            {{#if isOutline}}
+              <div class='mb-2'>
+                <a
+                  href='{{link}}'
+                  class='btn btn-outline-primary'
+                >{{text}}</a></div>
+            {{else}}
+            {{/if}}
+          {{/if}}
+        {{/each}}
+      </div>
+      <div class='col-3'>
+        {{#each list}}
+          {{#if isSecondary}}
+            {{#if isOutline}}{{else}}
+              <div class='mb-2'>
+                <a
+                  href='{{link}}'
+                  class='btn btn-secondary'
+                >{{text}}</a></div>
+            {{/if}}
+          {{/if}}
+        {{/each}}
+      </div>
+      <div class='col-3'>
+        {{#each list}}
+          {{#if isSecondary}}
+            {{#if isOutline}}
+              <div class='mb-2'><a
+                  href='{{link}}'
+                  class='btn btn-outline-secondary'
+                >{{text}}</a></div>
+            {{else}}
+            {{/if}}
+          {{/if}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</main>

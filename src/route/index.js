@@ -38,7 +38,109 @@ router.get('/', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('index', {
-    layout: 'default2',
+    layout: 'index',
+    list: [
+      {
+        link: '/summary',
+        text: 'Summary',
+        isPrimary: true,
+        isOutline: true,
+      },
+      {
+        link: '/skills',
+        text: 'Skills',
+        isPrimary: true,
+        isOutline: true,
+      },
+      {
+        link: '/education',
+        text: 'Education',
+        isPrimary: true,
+        isOutline: true,
+      },
+      {
+        link: '/work',
+        text: 'Work',
+        isSecondary: true,
+      },
+      {
+        link: '/person',
+        text: 'Person',
+        isSecondary: true,
+      },
+      {
+        link: '/bio',
+        text: 'Bio',
+        isSecondary: true,
+      },
+      {
+        link: '/program',
+        text: 'Program',
+        isSecondary: true,
+      },
+      {
+        link: '/web',
+        text: 'Web',
+        isSecondary: true,
+      },
+      {
+        link: '/car',
+        text: 'car',
+        isSecondary: true,
+        isOutline: true,
+      },
+      {
+        link: '/mac',
+        text: 'mac',
+        isSecondary: true,
+        isOutline: true,
+      },
+      {
+        link: '/facebook',
+        text: 'facebook',
+        isSecondary: true,
+        isOutline: true,
+      },
+      {
+        link: '/task21',
+        text: 'task21',
+        isInfo: true,
+      },
+      {
+        link: '/task31',
+        text: 'task31',
+        isInfo: true,
+      },
+      {
+        link: '/shophome',
+        text: 'shophome',
+        isPrimary: true,
+      },
+      {
+        link: '/shoporder',
+        text: 'shoporder',
+        isPrimary: true,
+      },
+      {
+        link: '/shopcart',
+        text: 'shopcart',
+        isPrimary: true,
+      },
+      {
+        link: '/shopprofile',
+        text: 'shopprofile',
+        isPrimary: true,
+      },
+      {
+        link: '/shopreview',
+        text: 'shopreview',
+        isPrimary: true,
+      },
+      {
+        link: '/shopcatalog',
+        text: 'shopcatalog',
+      },
+    ],
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
@@ -363,8 +465,8 @@ router.get('/person', function (req, res) {
 
 router.get('/bio', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
-  res.render('basic', {
-    layout: 'bio',
+  res.render('bio', {
+    layout: 'basic',
     name: 'Albert Einstein',
     birthdate: 'March 14, 1879',
     birthplace:
