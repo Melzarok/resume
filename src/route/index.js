@@ -61,7 +61,8 @@ router.get('/', function (req, res) {
       {
         link: '/work',
         text: 'Work',
-        isSecondary: true,
+        isPrimary: true,
+        isOutline: true,
       },
       {
         link: '/person',
@@ -303,9 +304,6 @@ router.get('/work', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('work', {
     // ↙ сюди вводимо JSON дані
-
-    layout: 'big',
-
     page: {
       title: 'Resume | Work',
     },
